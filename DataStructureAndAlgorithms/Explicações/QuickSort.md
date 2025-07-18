@@ -1,0 +1,4 @@
+﻿# Quick Sort
+### Ordenação utilizando o "Divide And Conquer", dividindo a array em subarrays em torno de um pivot e ordenar essas subarrays por meio da recursividade.
+### Para implementar será utilizado 2 ponteiros i e j que começarão em left - 1 e left (left será o inicio da array e right será o final). O pivot será right nessa implementação, onde queremos que tudo que seja menor do que pivot fique para a esquerda e o que for maior deverá ficar a direita de pivot.
+### Após a primeira chamada, será chamada a função novamente para ordenar as subarrays de forma recursiva até que não reste subarrays (left < right).

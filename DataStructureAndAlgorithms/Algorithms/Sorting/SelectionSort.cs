@@ -4,10 +4,10 @@ public class SelectionSort
 {
     public static void Sort(int[] arr)
     {
-        for (int i = 0; i < arr.Length - 1; i++)
+        for (var i = 0; i < arr.Length - 1; i++)
         {
-            int minIndex = i;
-            for (int j = i + 1; j < arr.Length; j++)
+            var minIndex = i;
+            for (var j = i + 1; j < arr.Length; j++)
             {
                 if (arr[j] < arr[minIndex])
                     minIndex = j;
@@ -15,7 +15,7 @@ public class SelectionSort
             if (minIndex != i)
             {
                 (arr[i], arr[minIndex]) = (arr[minIndex], arr[i]);
-                // tuple swaping instead of using a var aux to change the values
+                // tuple swaping instead of using an aux var to change the values
             }
         }
     }
