@@ -3,7 +3,7 @@
 public class Swap
 {
     public static void __swap(int a, int b)
-    // using an aux var
+    // swap com var auxiliar
     {
         var aux = a;
         a = b;

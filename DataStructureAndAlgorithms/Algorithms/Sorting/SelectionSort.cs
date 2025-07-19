@@ -15,7 +15,7 @@ public class SelectionSort
             if (minIndex != i)
             {
                 (arr[i], arr[minIndex]) = (arr[minIndex], arr[i]);
-                // tuple swaping instead of using an aux var to change the values
+                // tuple swaping ao invés de trocar os valores utilizando uma variavel auxiliar
             }
         }
     }
