@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-
-namespace DataStructureAndAlgorithms.Algorithms.Sorting;
+﻿namespace DataStructureAndAlgorithms.Algorithms.Sorting;
 
 public class QuickSort
 {
@@ -15,7 +13,7 @@ public class QuickSort
                
     }
 
-    public static int Partition(int[] arr, int left, int right)
+    private static int Partition(int[] arr, int left, int right)
     {
         int pivot = arr[right];
         int i = left - 1;
