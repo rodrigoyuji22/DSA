@@ -4,6 +4,8 @@ public class QuickSort
 {
     public static void Sort(int[] arr, int left, int right)
     {
+        if (arr.Length <= 1)
+            return;
         // caso base da chamada recursiva
         if (left < right)
         {
@@ -19,18 +21,19 @@ public class QuickSort
     private static int Partition(int[] arr, int left, int right)
     {
         // escolher o pivot, iniciar os ponteiros (i, j)
-        int pivot = arr[right];
-        int i = left - 1;
-        for (int j = left; j < right; j++)
+        int pivotIndex = new Random().Next(left+1, right);
+        (arr[pivotIndex], arr[right]) = (arr[right], arr[pivotIndex]);
+        int j = left - 1;
+        for (int i = left; i < right; i++)
         {
-            if (arr[j] <= pivot)
+            if (arr[i] <= arr[right])
             {
-                i++;
+                j++;
                 (arr[i], arr[j]) = (arr[j], arr[i]);
             }
         }
         // colocar o pivot na posição entre as 2 partições e retornar a posição dele
-        (arr[i + 1], arr[right]) = (arr[right], arr[i + 1]);
-        return i + 1;
+        (arr[j + 1], arr[right]) = (arr[right], arr[j + 1]);
+        return j + 1;
     }
 }
