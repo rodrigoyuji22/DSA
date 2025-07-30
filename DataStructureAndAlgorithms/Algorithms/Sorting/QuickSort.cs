@@ -4,8 +4,6 @@ public class QuickSort
 {
     public static void Sort(int[] arr, int left, int right)
     {
-        if (arr.Length <= 1)
-            return;
         // caso base da chamada recursiva
         if (left < right)
         {

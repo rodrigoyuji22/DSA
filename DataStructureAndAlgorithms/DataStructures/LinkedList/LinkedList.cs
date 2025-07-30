@@ -2,25 +2,25 @@
 
 public class DoublyLinkedList
 {
-    private class Node
+    private class ListNode
     {
         public readonly int Value;
-        public Node? Next;
-        public Node? Prev;
+        public ListNode? Next;
+        public ListNode? Prev;
 
-        public Node(int value)
+        public ListNode(int value)
         {
             Value = value;
             Next = null;
             Prev = null;
         }
     }
-    private Node? _head;
-    private Node? _tail;
+    private ListNode? _head;
+    private ListNode? _tail;
 
     public void BeginInsert(int value)
     {
-        var newNode = new Node(value);
+        var newNode = new ListNode(value);
         if (_head == null)
             _head = _tail = newNode;
         else
@@ -32,7 +32,7 @@ public class DoublyLinkedList
     }
     public void EndInsert(int value)
     {
-        var newNode = new Node(value);
+        var newNode = new ListNode(value);
         if (_tail == null)
             _tail = _head = newNode;
         else
