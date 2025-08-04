@@ -26,7 +26,6 @@ public class MergeSort
             fast = fast.next.next;
             slow = slow.next;
         }
-
         return prevSlow;
     }
 
