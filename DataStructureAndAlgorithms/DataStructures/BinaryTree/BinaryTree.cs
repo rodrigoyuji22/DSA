@@ -66,5 +66,21 @@ public class BinaryTree
             return SearchRecursive(node.left, val);
         return SearchRecursive(node.right, val);
     }
+
+    public IList<TreeNode> PreOrderTraversal()
+    {
+        var result = new List<TreeNode>();
+        PreOrderTraversalRecursive(Root, result);
+        return result;
+    }
+
+    private void PreOrderTraversalRecursive(TreeNode node, IList<TreeNode> result)
+    {
+        if(node == null)
+            return;
+        result.Add(node);
+        PreOrderTraversalRecursive(node.left, result);
+        PreOrderTraversalRecursive(node.right, result);
+    }
 }
 
