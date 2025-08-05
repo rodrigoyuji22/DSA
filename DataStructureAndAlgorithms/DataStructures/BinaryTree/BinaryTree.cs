@@ -81,6 +81,38 @@ public class BinaryTree
         result.Add(node);
         PreOrderTraversalRecursive(node.left, result);
         PreOrderTraversalRecursive(node.right, result);
+        // executa a primeira chamada recursiva ate cair no caso base, interrompe a execucao e comeca a execucao da segunda chamada
     }
+    public IList<TreeNode> InOrderTraversal()
+    {
+        var result = new List<TreeNode>();
+        InOrderTraversalRecursive(Root, result);
+        return result;
+    }
+    private void InOrderTraversalRecursive(TreeNode node, IList<TreeNode> result)
+    {
+        if(node == null)
+            return;
+        InOrderTraversalRecursive(node.left, result);
+        result.Add(node);
+        InOrderTraversalRecursive(node.right, result);
+    }
+    public IList<TreeNode> PostOrderTraversal()
+    {
+        var result = new List<TreeNode>();
+        PostOrderTraversalRecursive(Root, result);
+        return result;
+    }
+    private void PostOrderTraversalRecursive(TreeNode node, IList<TreeNode> result)
+    {
+        if(node == null)
+            return;
+        PostOrderTraversalRecursive(node.left, result);
+        PostOrderTraversalRecursive(node.right, result);
+        result.Add(node);
+        
+    }
+    
+    
 }
 
