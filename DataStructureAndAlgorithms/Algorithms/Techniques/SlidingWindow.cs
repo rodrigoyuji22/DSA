@@ -25,4 +25,27 @@ public class SlidingWindow
         }
         return max;
     }
+    
+    // Longest Substring Without Repeating Characteres LeetCode 3.
+    public int LengthOfLongestSubstring(string s)
+    {
+        int l = 0, r = 0, maxLen = 0;
+        var set = new HashSet<char>();
+
+        while (r < s.Length)
+        {
+            if (!set.Contains(s[r]))
+            {
+                set.Add(s[r]);
+                maxLen = Math.Max(maxLen, r - l + 1);
+                r++;
+            }
+            else
+            {
+                set.Remove(s[l]);
+                l++;
+            }
+        }
+        return maxLen;
+    }
 }
