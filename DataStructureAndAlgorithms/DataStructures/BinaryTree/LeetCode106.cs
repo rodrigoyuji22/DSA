@@ -4,8 +4,7 @@ public class LeetCode106
 {
     /* Construir uma binaryTree com base no inorderTraversal e postorderTraversal que é dado
     inorder = [9,3,15,20,7]   postorder = [9,15,7,20,3]
-    obs: O root é o último elemento de um postorder, ja que é left > right > root, e no inorder, tudo que está
-    à esquerda de root é left e tudo que está à direita é right
+    obs: O root é o último elemento de um postorder, ja que é left > right > root
     */
     public TreeNode BuildTree(int[] inorder, int[] postorder)
     {

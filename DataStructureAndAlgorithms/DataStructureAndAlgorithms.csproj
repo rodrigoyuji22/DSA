@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Folder Include="Explicações\LeetCode_Problems\" />
       <Folder Include="Explicações\Searching\" />
     </ItemGroup>
 
