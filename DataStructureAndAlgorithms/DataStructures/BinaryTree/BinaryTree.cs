@@ -87,49 +87,49 @@ public class BinaryTree
         return false;
     }    
     
-    public IList<TreeNode> PreOrderTraversal()
+    public IList<int> PreOrderTraversal()
     {
-        var result = new List<TreeNode>();
+        var result = new List<int>();
         PreOrderTraversalRecursive(Root, result);
         return result;
     }
 
-    private void PreOrderTraversalRecursive(TreeNode node, IList<TreeNode> result)
+    private void PreOrderTraversalRecursive(TreeNode node, IList<int> result)
     {
         if(node == null)
             return;
-        result.Add(node);
+        result.Add(node.val);
         PreOrderTraversalRecursive(node.left, result);
         PreOrderTraversalRecursive(node.right, result);
         // executa a primeira chamada recursiva ate cair no caso base, interrompe a execucao e comeca a execucao da segunda chamada
     }
-    public IList<TreeNode> InOrderTraversal()
+    public IList<int> InOrderTraversal()
     {
-        var result = new List<TreeNode>();
+        var result = new List<int>();
         InOrderTraversalRecursive(Root, result);
         return result;
     }
-    private void InOrderTraversalRecursive(TreeNode node, IList<TreeNode> result)
+    private void InOrderTraversalRecursive(TreeNode node, IList<int> result)
     {
         if(node == null)
             return;
         InOrderTraversalRecursive(node.left, result);
-        result.Add(node);
+        result.Add(node.val);
         InOrderTraversalRecursive(node.right, result);
     }
-    public IList<TreeNode> PostOrderTraversal()
+    public IList<int> PostOrderTraversal()
     {
-        var result = new List<TreeNode>();
+        var result = new List<int>();
         PostOrderTraversalRecursive(Root, result);
         return result;
     }
-    private void PostOrderTraversalRecursive(TreeNode node, IList<TreeNode> result)
+    private void PostOrderTraversalRecursive(TreeNode node, IList<int> result)
     {
         if(node == null)
             return;
         PostOrderTraversalRecursive(node.left, result);
         PostOrderTraversalRecursive(node.right, result);
-        result.Add(node);
+        result.Add(node.val);
         
     }
 
