@@ -132,6 +132,31 @@ public class BinaryTree
         result.Add(node);
         
     }
+
+    public bool Bfs(TreeNode root, int target)
+    {
+        if (root == null)
+            return false;
+
+        var queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+
+        // iteracao da fila, enquanto ela nao for vazia(quantidade de elementos maior que 0)
+        while (queue.Count > 0)
+        {
+            /* dequeue serve tanto para ler o elemento que estou removendo da fila quanto para referenciar.
+             Na implementacao estou utilizando o dequeue para comparar com target e para referenciar os nodos
+             filhos, adicionando os a fila.*/
+            var node = queue.Dequeue();
+            if (node.val == target)
+                return true;
+            if(node.left != null)
+                queue.Enqueue(node.left);
+            if(node.right != null)
+                queue.Enqueue(node.right);
+        }
+        return false;
+    }
     
     
 }
