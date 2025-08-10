@@ -67,26 +67,6 @@ public class BinaryTree
         return SearchRecursive(node.right, val);
     }
     
-    public bool Dfs(int val)
-    {
-        return DfsRecursive(Root, val);
-    }
-
-    private bool DfsRecursive(TreeNode node, int val)
-    {
-        if (node == null)
-            return false;
-        if(node.val == val)
-            return true;
-        
-        if(SearchRecursive(node.left, val))
-            return true;
-        if(SearchRecursive(node.right, val))
-            return true;
-        
-        return false;
-    }    
-    
     public IList<int> PreOrderTraversal()
     {
         var result = new List<int>();
@@ -155,6 +135,25 @@ public class BinaryTree
             if(node.right != null)
                 queue.Enqueue(node.right);
         }
+        return false;
+    }
+    public bool Dfs(int val)
+    {
+        return DfsRecursive(Root, val);
+    }
+
+    private bool DfsRecursive(TreeNode node, int val)
+    {
+        if (node == null)
+            return false;
+        if(node.val == val)
+            return true;
+        
+        if(SearchRecursive(node.left, val))
+            return true;
+        if(SearchRecursive(node.right, val))
+            return true;
+        
         return false;
     }
     
