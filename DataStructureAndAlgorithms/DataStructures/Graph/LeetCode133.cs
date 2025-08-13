@@ -19,5 +19,32 @@ public class LeetCode133
             /* se neighbors nao for null, utilize o valor instanciado, caso contrario
                utilize uma new List<Node>(); */
         }
+        public Node CloneGraph(Node node) {
+            var map = new Dictionary<Node, Node>();
+            if(node == null)
+                return node;
+            var q = new Queue<Node>();
+            q.Enqueue(node);
+            map[node] = new Node(node.val);
+            while(q.Count > 0)
+            {
+                var curr = q.Dequeue();
+                foreach(var neighbor in curr.neighbors)
+                {
+                    if(!map.ContainsKey(neighbor))
+                    {   
+                        q.Enqueue(neighbor);
+                        map[neighbor] = new Node(neighbor.val);
+                    }
+                    // fora do if pois o grafo não é direcionado
+                    map[curr].neighbors.Add(map[neighbor]);
+                }
+
+
+            }
+            return map[node];
+
+        }
+        
     }
 }
