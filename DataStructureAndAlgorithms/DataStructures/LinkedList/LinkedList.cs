@@ -15,6 +15,7 @@ public class DoublyLinkedList
             Prev = null;
         }
     }
+    // ponteiros q apontam para o head(inicio da linkedList) e tail(final da linkedList)
     private ListNode? _head;
     private ListNode? _tail;
 
