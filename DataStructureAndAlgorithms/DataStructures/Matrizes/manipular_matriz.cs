@@ -14,6 +14,14 @@ public class manipular_matriz
         { 4, 5, 6 },
         { 7, 8, 9 }
     };
+
+    private int[][] matrix = new int[4][];
+    // jagged array, matriz com colunas de tamanho flexivel
+    
+    private List<List<int>> arr = new List<List<int>>();
+    // lista de listas, tamanho de linhas e de colunas flexivel
+    
+    
     // percorrer array
     public void Loop()
     {
