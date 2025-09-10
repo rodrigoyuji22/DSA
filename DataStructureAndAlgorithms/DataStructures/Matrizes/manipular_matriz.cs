@@ -33,6 +33,15 @@ public class manipular_matriz
             }
         }
         // acessa os elementos da matriz como se fosse por um plano ortogonal, complexidade temporal O(N*M)
+
+        // percorrer jagged array ao inves de multidimensional array [,]
+        for (int i = 0; i < matrix.Length; i++)
+        {
+            for (int j = 0; j < matrix[i].Length; j++)
+            {
+                Console.WriteLine(matrix[i][j]);
+            }
+        }
     }
 }
 
