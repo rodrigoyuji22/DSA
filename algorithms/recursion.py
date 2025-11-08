@@ -1,3 +1,4 @@
+# loop backwards ou normal
 def fatorial_iterativo(number):
     if number == 0:
         return 1
@@ -14,15 +15,24 @@ def fatorial_iterativo2(number):
         count *= i
     return count
 
-# loop backwards ou normal
+def soma_iterativa(number):
+    count = 0
+    for i in range(1, number+1):
+        count += i
+    return count
 
 
 
+
+
+# operações de forma recursiva
 def fatorial_recursivo(number):
     if number == 1:
         return 1
     return number * fatorial_recursivo(number-1)
 
-print(fatorial_recursivo(6))
 
-# fatorial de forma recursiva
+def soma_recursiva(number):
+    if number == 1:
+        return 1
+    return number + soma_recursiva(number-1)
