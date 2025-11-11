@@ -36,3 +36,15 @@ def soma_recursiva(number):
     if number == 1:
         return 1
     return number + soma_recursiva(number-1)
+
+
+def soma_array_recursiva(arr):
+    if len(arr) == 0:
+        return 0
+    return arr[0] + soma_array_recursiva(arr[1:])
+
+def count_recursive(arr):
+    if arr == []:
+        return 0
+    return 1 + count_recursive(arr[1:])
+
