@@ -13,3 +13,5 @@ def partition(arr, left, right):
             arr[j], arr[i] = arr[i], arr[j]
         arr[i+1], arr[right] = arr[right], arr[i+1]
     return i+1
+    
+    

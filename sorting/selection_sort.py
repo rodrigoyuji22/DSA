@@ -1,4 +1,4 @@
-def selection_sort(arr):
+def selection_sort(arr: list) -> list:
     for i in range(len(arr)-1):
         lowest = i
         for j in range(i+1, len(arr)):
@@ -12,7 +12,7 @@ def selection_sort(arr):
   # lowest inicializado no loop de fora
   # armazeno os index ao inves dos valores
 
-def selection_sort2(arr):
+def selection_sort2(arr: list) -> list:
     for i in range(len(arr)-1, 0, -1):
         highest = i
         for j in range(i-1, -1, -1):
