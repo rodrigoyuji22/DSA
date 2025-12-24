@@ -1,6 +1,6 @@
 from collections import deque
 
-
+# implementação com binary tree
 class TreeNode:
     def __init__(self, val: int):
         self.val = val
@@ -23,6 +23,7 @@ def bfs_tree_node(root: TreeNode, target: int) -> bool:
             queue.append(curr.left)
     return False
 
+# implementação com listas de adjacências
 def bfs(data: dict[str, list[str]], start: str, target: str) -> bool:
     if start == target:
         return True
