@@ -12,7 +12,6 @@ def binary_search(arr ,target):
     return None
 
 # observações:
-  # pegar o ultimo elemento é len(arr)-1, eu fiz len(arr-1) na primeira tentativa
   # / barra simples retorna float, // retorna inteiro
   # para comparar o valor de target com o que está na posição de guess, arr[guess]
 
