@@ -13,6 +13,6 @@ class Solution:
             pivot = self.partition(arr, left, right)
             self.quicksort(arr, left, pivot-1)
             self.quicksort(arr, pivot+1, right)
-    def sortArray(self, nums: List[int]) -> List[int]:
+    def sortArray(self, nums):
         self.quicksort(nums, 0, len(nums)-1)
         return nums
