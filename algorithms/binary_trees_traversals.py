@@ -48,4 +48,26 @@ class BinaryTree:
             arr.append(node.val)
             self._preorder_recursive(node.left, arr)
             self._preorder_recursive(node.right, arr)
+
+    def inoorder_traversal(self):
+        output = []
+        self._inorder_recursive(self.root, output)
+        return output
+    
+    def _inorder_recursive(self, node, arr):
+        if node:
+            arr.append(node.val)
+            self._inorder_recursive(node.left, arr)
+            self._inorder_recursive(node.right, arr)
+            
+    def postorder_traversal(self):
+        output = []
+        self._postorder_recursive(self.root, output)
+        return output
+    
+    def _postorder_recursive(self, node, arr):
+        if node:
+            arr.append(node.val)
+            self._postorder_recursive(node.left, arr)
+            self._postorder_recursive(node.right, arr)
             
