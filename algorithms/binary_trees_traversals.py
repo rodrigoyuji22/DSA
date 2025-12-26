@@ -38,4 +38,14 @@ class BinaryTree:
             self._search_recursive(node.left, val)
         self._search_recursive(node.right, val)
                 
-        
+    def preorder_traversal(self):
+        output = []
+        self._preorder_recursive(self.root, output)
+        return output
+    
+    def _preorder_recursive(self, node, arr):
+        if node:
+            arr.append(node.val)
+            self._preorder_recursive(node.left, arr)
+            self._preorder_recursive(node.right, arr)
+            
