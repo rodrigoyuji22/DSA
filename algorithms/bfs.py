@@ -10,8 +10,7 @@ class TreeNode:
 def bfs_tree_node(root: TreeNode, target: int) -> bool:
     if root is None:
         return False
-    queue = deque()
-    queue.append(root)
+    queue = deque([root])
     
     while queue:
         curr = queue.popleft()
@@ -29,14 +28,14 @@ def bfs(data: dict[str, list[str]], start: str, target: str) -> bool:
         return True
         
     visited = set()        
-    queue = deque()
-    queue.append(start)
+    queue = deque([start])
     visited.add(start)
     while queue:
         curr = queue.popleft()
         if curr == target:
             return True
         
+        # iterar sobre data[curr] -> quero iterar sobre a lista value da chave curr
         for neighbor in data[curr]:
             if neighbor not in visited:
                 queue.append(neighbor)
