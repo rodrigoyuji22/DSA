@@ -26,17 +26,17 @@ class BinaryTree:
             else:
                 node.right = TreeNode(val)
                 
-    def search(self, val):
-        return self._search_recursive(self.root, val)
+    def search(self, target):
+        return self._search_recursive(self.root, target)
         
-    def _search_recursive(self, node, val):
+    def _search_recursive(self, node, target):
         if not node:
             return False
-        if node.val == val:
+        if node.val == target:
             return True
-        if val < node.val:
-            self._search_recursive(node.left, val)
-        self._search_recursive(node.right, val)
+        if target < node.val:
+            return self._search_recursive(node.left, target)
+        return self._search_recursive(node.right, target)
                 
     def preorder_traversal(self):
         output = []

@@ -6,21 +6,25 @@ class TreeNode:
         self.val = val
         self.right = None
         self.left = None
+
+class BinaryTree:
+    def __init__(self):
+        self.root = None
     
-def bfs_tree_node(root: TreeNode, target: int) -> bool:
-    if root is None:
-        return False
-    queue = deque([root])
-    
-    while queue:
-        curr = queue.popleft()
-        if curr.val == target:
-            return True
-        if curr.right:
-            queue.append(curr.right)
-        if curr.left:
-            queue.append(curr.left)
-    return False
+    def bfs_tree_node(self, target: int) -> bool:
+        if self.root is None:
+            return False
+        queue = deque([self.root])
+        
+        while queue:
+            curr = queue.popleft()
+            if curr.val == target:
+                return True
+            if curr.right:
+                queue.append(curr.right)
+            if curr.left:
+                queue.append(curr.left)
+        return False 
 
 # implementação com listas de adjacências
 def bfs(data: dict[str, list[str]], start: str, target: str) -> bool:
