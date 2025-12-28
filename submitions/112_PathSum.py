@@ -21,8 +21,3 @@ class Solution:
         return self.target_recursive(node.left, _sum, target) or self.target_recursive(node.right, _sum, target)
 
 # Não consigo manter o valor de uma variavel dentro da função recursiva, ela só se mantem se for argumento da função recursiva
-
-
-
-
-        
